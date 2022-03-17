@@ -1,0 +1,60 @@
+.msg-text {
+    padding: 15px;
+    margin: 0;
+    text-align: center
+ }
+      
+ #loading {
+    top:      43%; /* posicao vertical na tela */
+    margin:   -65px 0 0 -45px; /* não é necessário alterar estas margens */ 
+ }
+     
+ #loading .loading-indicator {
+    background-repeat: no-repeat !important; /* sem essa propriedade a imagem se repete na tela */
+    background-position: center !important; /* centraliza a imagem dentro do container loading-indicator */
+    background-size: 70px !important; /* tamanho da animação */
+    background-color: transparent; 
+    color:      #333; /* Cor do texto (Loading, Carregando) */
+    font:       15px arial,helvetica,tahoma; /* Tamanho e tipo da fonte */
+    padding:    130px 10px 10px 10px; /* Posicionamento do texto. dependendo do background-size, pode ser necessário reajustar */  
+ }
+           
+ .x-mask-msg  {
+    background-size: 50px; 
+    background-color: #FFF !important;             
+    background-repeat: no-repeat !important;
+    background-position: center 8px  !important;
+    border-radius: 8px !important; 
+    border: 1px solid #CCC;
+    padding: 30px 40px 10px 40px !important; 
+    -webkit-box-shadow: 0px 5px 25px -11px rgba(92,92,92,1);
+    -moz-box-shadow: 0px 5px 25px -11px rgba(92,92,92,1);
+    box-shadow: 0px 5px 25px -11px rgba(92,92,92,1);
+ }
+
+.x-mask-msg-text, .x-mask-msg-inner {
+   background-color: transparent !important;  
+   background-image: none !important;
+   border:0 !important; 
+} 
+  
+.x-mask-msg-text {
+   margin: 0;
+   padding: 0;
+   margin: 35px 0 -6px 0;
+   text-align: center !important;      
+   color: #666 !important; 
+   position: relative;
+   bottom: 3px;
+}
+
+/* Opcional - Cor de fundo da tela (Loading, ScreenMask, ShowMask e Form Modal */  
+/* .x-mask { 
+   border: 0 !important;
+   opacity: .9;  
+   background: rgb(185, 200, 250) !important;
+   background: -moz-linear-gradient(10deg, #777 20%, #EEE 100%) !important;
+   background: -webkit-linear-gradient(10deg, #777 20%, #EEE 100%)!important  ;
+   background: linear-gradient(10deg, #777 20%, #EEE 100%)!important;
+   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#777",endColorstr="#EEE",GradientType=1) !important;  
+}   */

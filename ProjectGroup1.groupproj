@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{8B1E0735-8E1F-4A58-B2CF-744C3FBEEE82}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="ModelMobile.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="C:\Users\Luan\Desktop\UniFalcon\UniFalcon_compilado\UniFalcon\Demos\FSPopup\FSPopup.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ModelMobile">
+        <MSBuild Projects="ModelMobile.dproj"/>
+    </Target>
+    <Target Name="ModelMobile:Clean">
+        <MSBuild Projects="ModelMobile.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ModelMobile:Make">
+        <MSBuild Projects="ModelMobile.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FSPopup">
+        <MSBuild Projects="C:\Users\Luan\Desktop\UniFalcon\UniFalcon_compilado\UniFalcon\Demos\FSPopup\FSPopup.dproj"/>
+    </Target>
+    <Target Name="FSPopup:Clean">
+        <MSBuild Projects="C:\Users\Luan\Desktop\UniFalcon\UniFalcon_compilado\UniFalcon\Demos\FSPopup\FSPopup.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FSPopup:Make">
+        <MSBuild Projects="C:\Users\Luan\Desktop\UniFalcon\UniFalcon_compilado\UniFalcon\Demos\FSPopup\FSPopup.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ModelMobile;FSPopup"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ModelMobile:Clean;FSPopup:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ModelMobile:Make;FSPopup:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
